@@ -1,6 +1,6 @@
 # Jetson-Nano-Project
 ### Example Deployment Digits Caffe Model for Jetson-Inference Image Classification 
-#### Put Command Line at Jetson nano Terminal 
+#### Put Command Line at Jetson nano Terminal with Correct Path Directory
 $ ./imagenet-camera.py \
 --prototxt=/home/thee/Desktop/catdogpanda/deploy.prototxt \
 --model=/home/thee/Desktop/catdogpanda/snapshot_iter_16890.caffemodel \
