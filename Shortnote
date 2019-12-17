@@ -1,0 +1,15 @@
+cd ~/jetson-inference/build/aarch64/bin
+./detectnet-camera.py --camera=/dev/video0 --width=640 --height=480
+
+./camera-viewer.py --camera=/dev/video0 --width=640 --height=480
+
+./imagenet-camera.py --camera=/dev/video0 --width=640 --height=480
+
+#### Example Deployment Digits Caffe Model for Jetson-Inference Classification 
+./imagenet-camera.py \
+--prototxt=/home/thee/Desktop/catdogpanda/deploy.prototxt \
+--model=/home/thee/Desktop/catdogpanda/snapshot_iter_16890.caffemodel \
+--labels=/home/thee/Desktop/catdogpanda/labels.txt \
+--input_blob=data \
+--output_blob=softmax \
+--camera=/dev/video0 --width=640 --height=480
