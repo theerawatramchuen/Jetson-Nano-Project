@@ -10,7 +10,7 @@ $ ./imagenet-camera.py \
 --camera=/dev/video0 --width=640 --height=480
 
 
-#### IDS Camera Lib installation
+### IDS Camera Lib installation
 https://www.ensenso.com/manual/installation-on-nvidia-jetson.htm
 
 ### Sample cv2.VideoCapture() of Opencv
