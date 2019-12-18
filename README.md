@@ -11,7 +11,7 @@ $ ./imagenet-camera.py \
 
 cd ~/jetson-inference/build/aarch64/bin    ########### With USB2 Webcam (Change Camera resolution macth with your camera)
 
-############# Image Classification
+#### ######### Image Classification
 $ python3 imagenet-camera.py --model=resnet18 --input_blob=input_0 --output_blob=output_0 --labels=labels.txt --width=640 --height=480 --camera=/dev/video0
 
 $ ./imagenet-console --model=resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=labels.txt ~/datasets/cat_dog/test/cat/01.jpg cat.jpg
@@ -19,7 +19,7 @@ $ ./detectnet-camera.py --width=640 --height=480 --camera=/dev/video0 --network=
 $ ./detectnet-camera.py --width=640 --height=480 --camera=/dev/video0 --network=coco-dog
 $ ./camera-capture --camera=/dev/video0 --width=640 --height=480
 
-############ Custom Model Classification
+#### ######## Custom Model Classification
 $ NET=networks/esbx
 $ ./imagenet-console P3-111.jpg output_0.jpg --prototxt=$NET/deploy.prototxt --model=$NET/snapshot_iter_4752.caffemodel --labels=$NET/labels.txt --input_blob=data --output_blob=softmax
 
@@ -35,7 +35,7 @@ $ ./imagenet-camera --prototxt=$NET/deploy.prototxt --model=$NET/snapshot_iter_2
 $ NET=networks/ebsx3c
 $ ./imagenet-console P3-111.jpg output_0.jpg --prototxt=$NET/deploy.prototxt --model=$NET/snapshot_iter_2850.caffemodel --labels=$NET/labels.txt --input_blob=data --output_blob=softmax
 
-############ DeepStream  Resnet18 and Yolotiny3  
+#### ######## DeepStream  Resnet18 and Yolotiny3  
 $ cd ~/opt/nvidia/deepstream/deepstream-4.0/bin
 $ deepstream-app -c /opt/nvidia/deepstream/deepstream-4.0/samples/configs/deepstream-app/source1_usb_dec_infer_resnet_int8.txt
 
