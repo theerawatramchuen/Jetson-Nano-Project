@@ -13,3 +13,23 @@ cd ~/jetson-inference/build/aarch64/bin
 --input_blob=data \
 --output_blob=softmax \
 --camera=/dev/video0 --width=640 --height=480
+
+#### aicar   
+#### 
+$./imagenet-camera.py \
+--prototxt=/home/thee/Desktop/aicar/deploy.prototxt \
+--model=/home/thee/Desktop/aicar/snapshot_iter_2310.caffemodel \
+--labels=/home/thee/Desktop/aicar/labels.txt \
+--input_blob=data \
+--output_blob=softmax \
+--camera=/dev/video0 --width=640 --height=480
+
+#### DetectNet Dog CoCo 
+#### Note : At the end of deploy.prototxt, delete the layer named cluster
+$./detectnet-camera.py \
+--prototxt=/home/thee/Desktop/detectNet-dog/deploy.prototxt \
+--model=/home/thee/Desktop/detectNet-dog/snapshot_iter_96400.caffemodel \
+--input_blob=data \
+--output_cvg=coverage \
+--output_bbox=bboxes \
+--camera=/dev/video0 --width=640 --height=480 
