@@ -6,6 +6,8 @@ cd ~/jetson-inference/build/aarch64/bin
 ./imagenet-camera.py --camera=/dev/video0 --width=640 --height=480
 
 #### Example Deployment Digits Caffe Model for Jetson-Inference Classification 
+#### Loading Custom Models on Jetson
+#### https://github.com/dusty-nv/jetson-inference/blob/master/docs/imagenet-custom.md
 ./imagenet-camera.py \
 --prototxt=/home/thee/Desktop/catdogpanda/deploy.prototxt \
 --model=/home/thee/Desktop/catdogpanda/snapshot_iter_16890.caffemodel \
@@ -24,8 +26,9 @@ $./imagenet-camera.py \
 --output_blob=softmax \
 --camera=/dev/video0 --width=640 --height=480
 
-#### DetectNet Dog CoCo 
+#### DetectNet Dog CoCo Downloading the Detection Model to Jetson
 #### Note : At the end of deploy.prototxt, delete the layer named cluster
+#### https://github.com/dusty-nv/jetson-inference/blob/master/docs/detectnet-snapshot.md
 $./detectnet-camera.py \
 --prototxt=/home/thee/Desktop/detectNet-dog/deploy.prototxt \
 --model=/home/thee/Desktop/detectNet-dog/snapshot_iter_96400.caffemodel \
