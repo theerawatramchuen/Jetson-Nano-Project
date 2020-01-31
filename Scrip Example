@@ -1,3 +1,6 @@
+## Run VS Code = 
+$ code-oss
+
 cd ~/jetson-inference/build/aarch64/bin
 
 ./detectnet-camera.py --camera=/dev/video0 --width=640 --height=480 --network=ssd-inception-v2
@@ -27,6 +30,17 @@ $./imagenet-camera.py \
 --output_blob=softmax \
 --camera=/dev/video0 --width=640 --height=480
 
+#### boa-yin-chup  
+#### Hammer Detector with Relay output on GPIO18
+
+$ python3 ./hammer.py \
+--prototxt=/home/thee/Desktop/boa-yin-chup/deploy.prototxt \
+--model=/home/thee/Desktop/boa-yin-chup/snapshot_iter_290.caffemodel \
+--labels=/home/thee/Desktop/boa-yin-chup/labels.txt \
+--input_blob=data \
+--output_blob=softmax \
+--camera=/dev/video0 --width=640 --height=480
+ 
 #### DetectNet Dog CoCo 
 #### Note : At the end of deploy.prototxt, delete the layer named cluster
 $./detectnet-camera.py \
@@ -36,3 +50,7 @@ $./detectnet-camera.py \
 --output_cvg=coverage \
 --output_bbox=bboxes \
 --camera=/dev/video0 --width=640 --height=480 
+
+
+
+
