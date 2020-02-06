@@ -5,11 +5,23 @@ cd ~/jetson-inference/build/aarch64/bin
 
 ./detectnet-camera.py --camera=/dev/video0 --width=640 --height=480 --network=ssd-inception-v2
 
+./detectnet-camera.py --camera=/dev/video0 --width=640 --height=480 --network=facenet-120
+
+./detectnet-camera.py --camera=/dev/video0 --width=640 --height=480 --network=ped-100
+
 ./camera-viewer.py --camera=/dev/video0 --width=640 --height=480
 
 ./imagenet-camera.py --camera=/dev/video0 --width=640 --height=480 --network=resnet-18
 
 ./segnet-camera.py --camera=/dev/video0 --width=640 --height=480 --network=FCN-ResNet18-Cityscapes-512x256
+
+./segnet-camera.py --camera=/dev/video0 --width=640 --height=480 --network=fcn-resnet18-cityscapes-2048x1024
+
+./segnet-camera.py --camera=/dev/video0 --width=640 --height=480 --network=fcn-resnet18-mhp-512x320
+
+./segnet-camera.py --camera=/dev/video0 --width=640 --height=480 --network=fcn-resnet18-sun-640x512
+
+./segnet-camera.py --camera=/dev/video0 --width=640 --height=480 --network=fcn-resnet18-voc-512x320
 
 #### Example Deployment Digits Caffe Model for Jetson-Inference Classification 
 ./imagenet-camera.py \
