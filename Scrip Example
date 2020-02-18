@@ -4,6 +4,11 @@ $ code-oss
 ### Sample Classification, Object Detection, Segmentation
 cd ~/jetson-inference/build/aarch64/bin
 
+
+### CSI Camera
+./detectnet-camera.py --width=1024 --height=768 --network=ssd-inception-v2
+
+### USB Camera
 ./detectnet-camera.py --camera=/dev/video1 --width=640 --height=480 --network=ssd-inception-v2
 
 ./detectnet-camera.py --camera=/dev/video1 --width=1280 --height=1024 --network=ssd-inception-v2
