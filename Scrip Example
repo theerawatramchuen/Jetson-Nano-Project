@@ -1,9 +1,12 @@
 ## Run VS Code = 
 $ code-oss
 
+### Sample Classification, Object Detection, Segmentation
 cd ~/jetson-inference/build/aarch64/bin
 
-./detectnet-camera.py --camera=/dev/video0 --width=640 --height=480 --network=ssd-inception-v2
+./detectnet-camera.py --camera=/dev/video1 --width=640 --height=480 --network=ssd-inception-v2
+
+./detectnet-camera.py --camera=/dev/video1 --width=1280 --height=1024 --network=ssd-inception-v2
 
 ./detectnet-camera.py --camera=/dev/video0 --width=640 --height=480 --network=facenet-120
 
@@ -22,8 +25,6 @@ cd ~/jetson-inference/build/aarch64/bin
 ./segnet-camera.py --camera=/dev/video0 --width=640 --height=480 --network=fcn-resnet18-sun-640x512
 
 ./segnet-camera.py --camera=/dev/video0 --width=640 --height=480 --network=fcn-resnet18-voc-512x320
-
-./segnet-camera.py --camera=/dev/video0 --width=640 --height=480 --network=fcn-resnet18-deepscene-864x480
 
 #### Example Deployment Digits Caffe Model for Jetson-Inference Classification 
 ./imagenet-camera.py \
@@ -65,6 +66,21 @@ $./detectnet-camera.py \
 --output_bbox=bboxes \
 --camera=/dev/video0 --width=640 --height=480 
 
+#### DetectNet Chair CoCo 
+#### Note : At the end of deploy.prototxt, delete the layer named cluster
+$./detectnet-camera.py \
+--prototxt=/home/thee/Desktop/detectnet-chair/deploy.prototxt \
+--model=/home/thee/Desktop/detectnet-chair/snapshot_iter_223800.caffemodel \
+--input_blob=data \
+--output_cvg=coverage \
+--output_bbox=bboxes \
+--camera=/dev/video0 --width=640 --height=480 
 
+#### Install v4l-utils and gv4l2
+$ sudo apt-get install v4l-utils
+$ sudo apt-get install qv4l2
 
+$ lsusb -t
+$ v4l2-ctl --list-devices
+$ qv4l2 -d /dev/video1
 
