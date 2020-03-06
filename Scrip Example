@@ -6,6 +6,7 @@ cd ~/jetson-inference/build/aarch64/bin
 
 
 ### CSI Camera
+./detectnet-camera.py
 ./detectnet-camera.py --width=1024 --height=768 --network=ssd-inception-v2
 
 ### USB Camera
@@ -80,6 +81,16 @@ $./detectnet-camera.py \
 --output_cvg=coverage \
 --output_bbox=bboxes \
 --camera=/dev/video0 --width=640 --height=480 
+
+#### DetectNet pistol 
+#### Note : At the end of deploy.prototxt, delete the layer named cluster
+$./detectnet-camera.py \
+--prototxt=/home/thee/Desktop/detectnet-pistol/deploy.prototxt \
+--model=/home/thee/Desktop/detectnet-pistol/snapshot_iter_53200.caffemodel \
+--input_blob=data \
+--output_cvg=coverage \
+--output_bbox=bboxes \
+--camera=/dev/video1 --width=640 --height=480 
 
 #### Install v4l-utils and gv4l2
 $ sudo apt-get install v4l-utils
