@@ -1,4 +1,7 @@
 # Jetson-Nano-Project
+### Jetbot
+https://github.com/NVIDIA-AI-IOT/jetbot/wiki/Bill-of-Materials?fbclid=IwAR1fxhyIXBcduk5Dqpuiawq59q_T5GrC3PtZg1VQZW1AEQD_3x4GC7owMa4
+
 ### Example Deployment Digits Caffe Model for Jetson-Inference Image Classification 
 #### Put Command Line at Jetson nano Terminal with Correct Home Path Directory
 $ ./imagenet-camera.py \
