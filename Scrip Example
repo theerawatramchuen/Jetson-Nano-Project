@@ -100,3 +100,9 @@ $ lsusb -t
 $ v4l2-ctl --list-devices
 $ qv4l2 -d /dev/video1
 
+
+##### ROS
+export ROS_MASTER_URI=http://192.168.1.50:11311/
+rosrun image_publisher image_publisher __name:=image_publisher ~/jetson-inference/data/images/dog_0.jpg
+rosrun ros_deep_learning detectnet /detectnet/image_in:=/image_publisher/image_raw _model_name:=coco-dog
+
