@@ -1,5 +1,13 @@
 # Jetson-Nano-Project
 
+### Install v4l-utils and gv4l2
+$ sudo apt-get install v4l-utils <br>
+$ sudo apt-get install qv4l2 <br>
+
+$ lsusb -t <br>
+$ v4l2-ctl --list-devices <br>
+$ qv4l2 -d /dev/video1 <br>
+
 ### ROS
 export ROS_MASTER_URI=http://192.168.1.50:11311/       ### Or $roscore   <br>
 rosrun image_publisher image_publisher __name:=image_publisher ~/jetson-inference/data/images/dog_0.jpg <br>
