@@ -8,8 +8,14 @@ $ lsusb -t <br>
 $ v4l2-ctl --list-devices <br>
 $ qv4l2 -d /dev/video1 <br>
 
+### Headless contrl via Jupyter Notebook
+ssh -L 8000:localhost:8888 thee@192.168.1.49   ### From any desktop <br><br>
+Start the Jupyter server on the Jetson with jupyter notebook, then go to http://localhost:8000 on your own computer <br><br>
+$jupyter notebook <br>
+
 ### ROS   
-#### Installation https://github.com/dusty-nv/ros_deep_learning
+Installation https://github.com/dusty-nv/ros_deep_learning
+
 export ROS_MASTER_URI=http://192.168.1.50:11311/       ### Or $roscore   <br>
 rosrun image_publisher image_publisher __name:=image_publisher ~/jetson-inference/data/images/dog_0.jpg <br>
 source ~/catkin_ws/devel/setup.bash <br>
