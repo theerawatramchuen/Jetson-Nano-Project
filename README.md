@@ -9,7 +9,7 @@ $ v4l2-ctl --list-devices <br>
 $ qv4l2 -d /dev/video1 <br>
 
 ### ROS   
-## https://github.com/dusty-nv/ros_deep_learning
+#### Installation https://github.com/dusty-nv/ros_deep_learning
 export ROS_MASTER_URI=http://192.168.1.50:11311/       ### Or $roscore   <br>
 rosrun image_publisher image_publisher __name:=image_publisher ~/jetson-inference/data/images/dog_0.jpg <br>
 source ~/catkin_ws/devel/setup.bash <br>
