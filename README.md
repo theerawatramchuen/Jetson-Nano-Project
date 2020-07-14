@@ -29,7 +29,7 @@ Webcam publisher <br>
 $ ls /dev/video* <br>
 $ rosrun uvc_camera uvc_camera_node _device:=/dev/video1 <br>
 $ source ~/catkin_ws/devel/setup.bash <br>
-$ rosrun ros_deep_learning detectnet /detectnet/image_in:=/uvc_camera/image_raw _model_name:=pednet <br>
+$ rosrun ros_deep_learning detectnet /detectnet/image_in:=/image_raw _model_name:=pednet <br>
 
 ### Jetbot
 https://github.com/NVIDIA-AI-IOT/jetbot/wiki/Bill-of-Materials?fbclid=IwAR1fxhyIXBcduk5Dqpuiawq59q_T5GrC3PtZg1VQZW1AEQD_3x4GC7owMa4
