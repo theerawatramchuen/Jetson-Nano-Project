@@ -14,7 +14,11 @@ Start the Jupyter server on the Jetson with jupyter notebook, then go to http://
 $jupyter notebook <br>
 
 ### ROS   
-Installation https://github.com/dusty-nv/ros_deep_learning
+Installation <br>
+Follow https://github.com/dusty-nv/ros_deep_learning <br>
+sudo apt-get install ros-melodic-uvc-camera* <br>
+ls /dev/video* <br>
+rosrun uvc_camera uvc_camera_node _device:=/dev/video1 <br>
 
 export ROS_MASTER_URI=http://192.168.1.50:11311/       ### Or $roscore   <br>
 rosrun image_publisher image_publisher __name:=image_publisher ~/jetson-inference/data/images/dog_0.jpg <br>
