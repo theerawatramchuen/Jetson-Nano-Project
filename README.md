@@ -25,7 +25,7 @@ $ rosrun image_publisher image_publisher __name:=image_publisher ~/jetson-infere
 $ source ~/catkin_ws/devel/setup.bash <br>
 $ rosrun ros_deep_learning detectnet /detectnet/image_in:=/image_publisher/image_raw _model_name:=coco-dog <br>
 
-Webcam publisher <br>
+Webcam publisher *** Not yet Working *** <br>
 $ ls /dev/video* <br>
 $ rosrun uvc_camera uvc_camera_node _device:=/dev/video1 <br>
 $ source ~/catkin_ws/devel/setup.bash <br>
