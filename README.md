@@ -36,6 +36,7 @@ https://github.com/NVIDIA-AI-IOT/jetbot/wiki/Bill-of-Materials?fbclid=IwAR1fxhyI
 
 ### Example Deployment Digits Caffe Model for Jetson-Inference Image Classification 
 #### Put Command Line at Jetson nano Terminal with Correct Home Path Directory
+cd ~/jetson-inference/build/aarch64/bin    ########### With USB2 Webcam (Change Camera resolution macth with your camera) <br>
 $ ./imagenet-camera.py \
 --prototxt=/home/thee/Desktop/catdogpanda/deploy.prototxt \
 --model=/home/thee/Desktop/catdogpanda/snapshot_iter_16890.caffemodel \
@@ -44,7 +45,7 @@ $ ./imagenet-camera.py \
 --output_blob=softmax \
 --camera=/dev/video0 --width=640 --height=480
 
-cd ~/jetson-inference/build/aarch64/bin    ########### With USB2 Webcam (Change Camera resolution macth with your camera)
+
 
 #### ######### Image Classification
 $ python3 imagenet-camera.py --model=resnet18 --input_blob=input_0 --output_blob=output_0 --labels=labels.txt --width=640 --height=480 --camera=/dev/video0
