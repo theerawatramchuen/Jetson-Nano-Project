@@ -1,6 +1,5 @@
 # Jetson-Nano-Project
-### UV4L WebRTC
-WebRTC on Raspberry Pi: Live HD Video and Audio Streaming <br>
+### UV4L WebRTC on Raspberry Pi: Live HD Video and Audio Streaming <br>
 www.shorturl.at/vJX38 <br>
 
 ### Install v4l-utils and gv4l2
