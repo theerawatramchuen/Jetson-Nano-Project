@@ -1,7 +1,11 @@
 # Jetson-Nano-Project
 
-### Making a RTSP Server out of a Raspberry PI in 15 minutes www.shorturl.at/cdzNO
-### UV4L WebRTC on Raspberry Pi: Live HD Video and Audio Streaming www.shorturl.at/vJX38 
+### Making a RTSP Server out of a Raspberry PI in 15 minutes www.shorturl.at/cdzNO  <br>
+VLC, open network stream to:  rtsp://{IPAddressOfYourPI}:8554/unicast <br>
+
+### UV4L WebRTC on Raspberry Pi: Live HD Video and Audio Streaming www.shorturl.at/vJX38 <br>
+Web open at Address http://{IPAddressOfYourPI}:8080/stream/webrtc <br>
+
 ### auto run Raspberry pi www.shorturl.at/cdhwV
 
 ### Install v4l-utils and gv4l2
