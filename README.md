@@ -1,5 +1,8 @@
 # Jetson-Nano-Project
 
+### Jetson Nano -Remote VNC Access
+https://medium.com/@bharathsudharsan023/jetson-nano-remote-vnc-access-d1e71c82492b
+
 ### Making a RTSP Server out of a Raspberry PI in 15 minutes www.shorturl.at/cdzNO  <br>
 VLC, open network stream to:  rtsp://{IPAddressOfYourPI}:8554/unicast <br>
 
