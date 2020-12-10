@@ -1,0 +1,27 @@
+### Re-train SSD Mobilenet --> https://github.com/dusty-nv/jetson-inference/blob/master/docs/pytorch-ssd.md
+$ cd ~/jetson-inference/python/training/detection/ssd
+
+## Downloading the Data
+python3 open_images_downloader.py --max-images=2500 --class-names "Apple,Orange,Banana,Strawberry,Grape,Pear,Pineapple,Watermelon" --data=data/fruit
+
+## Re-train Training the SSD-Mobilenet Model
+python3 train_ssd.py --data=data/fruit --model-dir=models/fruit --batch-size=4 --epochs=30
+
+## Converting the Model to ONNX
+python3 onnx_export.py --model-dir=models/fruit
+
+## Running the Live Camera Program
+detectnet --model=models/fruit/ssd-mobilenet.onnx --labels=models/fruit/labels.txt --input-blob=input_0 --output-cvg=scores --output-bbox=boxes csi://0
+
+detectnet --model=models/fruit/ssd-mobilenet.onnx --labels=models/fruit/labels.txt --input-blob=input_0 --output-cvg=scores --output-bbox=boxes file://data/fruit/test/
+
+
+### Re-training PASCAL VOC example of chess dataset
+$ cd ~/jetson-inference/python/training/detection/ssd
+
+python3 train_ssd.py --dataset-type=voc --data=data/chess --model-dir=models/chess --batch-size=4 --epochs=30
+python3 onnx_export.py --model-dir=models/chess
+
+detectnet --model=models/chess/ssd-mobilenet.onnx --labels=models/chess/labels.txt --input-blob=input_0 --output-cvg=scores --output-bbox=boxes csi://0
+
+detectnet --model=models/chess/ssd-mobilenet.onnx --labels=models/chess/labels.txt --input-blob=input_0 --output-cvg=scores --output-bbox=boxes file://data/chess/JPEGImages/
