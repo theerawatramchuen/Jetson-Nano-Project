@@ -1,6 +1,6 @@
 # Jetson-Nano-Project
 
-### Dash-Cam Project
+### Dash-Cam Project (Remote Developemnt via ssh and proftpd)
 https://youtu.be/-WEi5S6gSNI
 
 ### Jetson Nano -Remote VNC Access
