@@ -1,5 +1,8 @@
 # Jetson-Nano-Project
 
+### YOLOv4 CrowdHuman Tutorial and Deploying onto Jetson Nano
+https://github.com/jkjung-avt/yolov4_crowdhuman#training-colab
+
 ### Dash-Cam Project (Remote Developemnt via ssh and proftpd)
 https://youtu.be/-WEi5S6gSNI
 
