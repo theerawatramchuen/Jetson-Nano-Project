@@ -20,7 +20,7 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 # DEALINGS IN THE SOFTWARE.
 #
-# import cv2
+import time
 import jetson.inference
 import jetson.utils
 
@@ -83,8 +83,9 @@ while True:
 		print(detection)
 		if detection.ClassID == 1: ## If found Person
 			print("saving found person image...")
-			jetson.utils.saveImageRGBA('image2send.jpg',img) #result=cv2.imwrite(r'image2send.jpg',img )
+			jetson.utils.saveImageRGBA('image2send.jpg',img) 
 			linenotify("Hello. How are you")
+			time.sleep(10)
 			break
 
 	# render the image
