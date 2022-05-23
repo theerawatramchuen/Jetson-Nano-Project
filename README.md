@@ -1,6 +1,6 @@
 # Jetson-Nano-Project
 
-### Smart Camera with rtsp IP-Cam Sonoff Model GK-200MP2-B
+### Smart Camera with Linenotify image of found person
 $ cd ~/jetson-inference/build/aarch64/bin <br/>
 $ python3 smartcam.py --camera=/dev/video0  ## Original is detectnet.py of jetson-inference package<br/>
 
