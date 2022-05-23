@@ -1,5 +1,9 @@
 # Jetson-Nano-Project
 
+### Smart Camera with rtsp IP-Cam Sonoff Model GK-200MP2-B
+$ cd ~/jetson-inference/build/aarch64/bin <br/>
+$ python3 smartcam.py --camera=/dev/video0  ## Original is detectnet.py of jetson-inference package<br/>
+
 ### YOLOv4 CrowdHuman Tutorial and Deploying onto Jetson Nano
 https://github.com/jkjung-avt/yolov4_crowdhuman#training-colab <br>
 https://github.com/jkjung-avt/tensorrt_demos#yolov4
