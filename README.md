@@ -9,7 +9,7 @@ https://github.com/jkjung-avt/yolov4_crowdhuman#training-colab <br>
 https://github.com/jkjung-avt/tensorrt_demos#yolov4
 
 ### Dash-Cam Project (Remote Developemnt via ssh and proftpd)<br/>
-sudo apt install proftpd ## install ftp server on jetson nano <br/>
+$ sudo apt install proftpd ## install ftp server on jetson nano <br/>
 https://youtu.be/-WEi5S6gSNI
 
 ### Jetson Nano -Remote VNC Access
