@@ -13,6 +13,7 @@ Install pip for Python3: sudo apt-get install python3-pip
 Now install the ueye wrapper: pip install pyueye
 Install ueye driver <br/>
 https://en.ids-imaging.com/download-details/AB00391.html?os=linux_arm&version=v8&bus=64&floatcalc=hard <br/>
+
 (Additional you may need some OpenCV libraries to display the image. In that case please search in the internet for guids to install OpenCV.) <br/>
 Move to your directory containing the Python Demo, right click and select "open in terminal". <br/>
 Then enter the following: python SimpleLive_Python_uEye_OpenCV.py <br/>
